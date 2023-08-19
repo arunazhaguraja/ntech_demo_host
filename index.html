@@ -15,6 +15,7 @@
     the `--base-href` argument provided to `flutter build`.
   -->
 
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -33,27 +34,13 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "1037426797";
+    var serviceWorkerVersion = "1639507706";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
-  <style>
-      .container {
-        width: 100vw;
-        height: 100vh;
-        display: flex; /* Default Axis is X*/
-        justify-content: center; /* Main Axis */
-        align-items: center; /* Cross Axis */
-      }      .indicator{
-        width: 50vw;
-      }
-</style>
 </head>
-<body style="overflow: hidden">
-<div id="loading_indicator" class="container">
-  <img class="indicator" src="./assets/assets/loading.gif" />
-</div>
-<script>
+<body>
+  <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -67,15 +54,6 @@
         }
       });
     });
-
-    window.onload = function () {
-        setTimeout(function () {
-          var loadingIndicator =                 document.getElementById("loading_indicator");
-          if (loadingIndicator) {
-            loadingIndicator.remove();
-          }
-        }, 10000);
-};
   </script>
 </body>
 </html>
