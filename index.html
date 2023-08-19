@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,28 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "744083221";
+    var serviceWorkerVersion = "2772157060";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <style>
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex; /* Default Axis is X*/
+        justify-content: center; /* Main Axis */
+        align-items: center; /* Cross Axis */
+      }      .indicator{
+        width: 50vw;
+      }
+</style>
 </head>
+<<<<<<< HEAD
+<body style="overflow: hidden">
+<div id="loading_indicator" class="container">
+  <img class="indicator" src="./assets/loading.gif" />
+</div>
+=======
 <body>
 <div id="flutter-root"></div> <!-- This is where your Flutter app will be rendered -->
 
@@ -25,6 +43,7 @@
   </div>
 </div>
 
+>>>>>>> 6fc124cfe4166b7c964169c651d9f826115072c9
 <script>
     // Add a loader to wait for the page to load and then initialize the Flutter app
     window.addEventListener('load', function(ev) {
@@ -49,6 +68,15 @@
         }
       });
     });
+    window.onload = function () {
+        setTimeout(function () {
+          var loadingIndicator =                 document.getElementById("loading_indicator");
+          if (loadingIndicator) {
+            loadingIndicator.remove();
+          }
+        }, 10000);
+};
   </script>
+
 </body>
 </html>
