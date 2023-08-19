@@ -1,15 +1,40 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Other meta tags and links -->
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="nnntech">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>nnntech</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "2772157060";
+    var serviceWorkerVersion = "1463683352";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -25,39 +50,14 @@
       }
 </style>
 </head>
-<<<<<<< HEAD
 <body style="overflow: hidden">
 <div id="loading_indicator" class="container">
   <img class="indicator" src="./assets/assets/loading.gif" />
 </div>
-=======
-<body>
-<div id="flutter-root"></div> <!-- This is where your Flutter app will be rendered -->
-
-<div id="loading-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.8); display: flex; justify-content: center; align-items: center;">
-  <div style="text-align: center;">
-    <div style="margin-bottom: 16px;">
-      <div class="loader"></div>
-    </div>
-    <p>Loading...</p>
-  </div>
-</div>
-
->>>>>>> 6fc124cfe4166b7c964169c651d9f826115072c9
-<script>
-    // Add a loader to wait for the page to load and then initialize the Flutter app
+  <script>
     window.addEventListener('load', function(ev) {
-      var loadingOverlay = document.getElementById('loading-overlay');
-
-      // Download main.dart.js and initialize the Flutter app
+      // Download main.dart.js
       _flutter.loader.loadEntrypoint({
-        initialPromise: new Promise(function (resolve) {
-          // Hide the loading overlay when the Flutter app is ready
-          window.addEventListener('flutter-first-frame', function() {
-            loadingOverlay.style.display = 'none';
-            resolve();
-          });
-        }),
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
@@ -77,6 +77,5 @@
         }, 10000);
 };
   </script>
-
 </body>
 </html>
